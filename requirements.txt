@@ -6,3 +6,8 @@ matplotlib=3.5.2
 seaborn=0.11.2
 scikit-learn=1.1.1
 beautifulsoup4=4.11.1
+ipywidgets
+openpyxl=3.0.10
+requests=2.28.1
+xlrd=2.0.1
+lxml=4.9.1

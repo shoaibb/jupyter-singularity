@@ -1,6 +1,6 @@
 # Singularity image for Conda and Jupyter
 
-This repo can be used to create a Singularity image for miniconda (with python 3.9) and jupyter. The image file can be used to run jupyter lab or notebook with some packages that are specified in the `requirements.txt` file. The created image file will be approx. 900MB in size.
+This repo can be used to create a Singularity image for miniconda (with python 3.9) and jupyter lab. The image file can be used to run jupyter lab with some packages that are specified in the `requirements.txt` file. The jupyter lab will write to /tmp location inside the container and it is suggested to bind a local dir to /tmp. The created image file will be approx. 900MB in size.
 
 ### Steps to build the image:
 
@@ -15,18 +15,14 @@ IMPORTANT: make sure you change **/path/to/img-dir** to a location that exists o
 You can run jupyter notebook or jupyter lab from the built image. First of all, cd to the path where the image file is created (same path as spcified in Step 3 above). 
 By default, the image can be used to run jupyter lab using the command: 
 
-`./jupyter.sif`
+`singularity run --bind /path/to/data:/tmp jupyter.sif`
 
 Or if you want to specify a port, use: 
 
-`./jupyter.sif --port=9000`
+`singularity run --bind /path/to/data:/tmp jupyter.sif --port=9000`
 
 Or if you want to specify both a port and ip use: 
 
-`./jupyter.sif --ip=1.1.1.1 --port=9000`
-
-However, if you would like to run jupyter notebook instead of jupyter lab, use: 
-
-`singularity exec jupyter.sif jupyter notebook --port=9000` 
+`singularity run --bind /path/to/data:/tmp jupyter.sif --ip=1.1.1.1 --port=9000`
 
 You may change the port from 9000 to any other.
