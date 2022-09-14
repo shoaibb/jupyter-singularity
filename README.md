@@ -6,7 +6,9 @@ This repo can be used to create a Singularity image for miniconda (with python 3
 
 - Step 1: Clone this repo: `git clone https://github.com/shoaibb/jupyter-singularity.git`
 - Step 2: cd to the cloned repo dir: `cd jupyter-singularity`
-- Step 3: Build singularity img using: `sudo singularity build jupyter.sif jupyter.def`
+- Step 3: Build singularity img using: `sudo singularity build /path/to/img-dir/jupyter.sif jupyter.def`
+
+IMPORTANT: make sure you change **/path/to/img-dir** to a location that exists on your system as it will be the final destination of the built image file **jupyter.sif**.  
 
 ### Running jupyter from the image file:
 
