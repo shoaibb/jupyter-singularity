@@ -12,7 +12,8 @@ IMPORTANT: make sure you change **/path/to/img-dir** to a location that exists o
 
 ### Running jupyter from the image file:
 
-You can run jupyter notebook or jupyter lab from the built image. By default, the image can be used to run jupyter lab using the command: 
+You can run jupyter notebook or jupyter lab from the built image. First of all, cd to the path where the image file is created (same path as spcified in Step 3 above). 
+By default, the image can be used to run jupyter lab using the command: 
 
 `./jupyter.sif`
 
